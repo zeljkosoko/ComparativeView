@@ -1,1 +1,16 @@
-<p>contract-options-boxes works!</p>
+<div class="box-area">
+    <div class="box" *ngFor="let clo of inputCLO">
+        <div *ngIf="clo.is_featured" class="promo">
+            {{iPromoText}}
+            <hr>
+        </div>
+        <h2>{{clo.name}}</h2>
+        <div>
+            <hr>
+        </div>
+      
+        
+        <button class="order">Naručite</button>
+    </div>
+</div>
+

@@ -1,0 +1,98 @@
+@import "../../../variables.scss";
+.box-area {
+  padding-top: 50px;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  align-items: flex-end;
+  @media screen and (max-width: 1000px){
+    flex-direction: column;
+    align-items: center;
+    .box{
+      max-width: 330px;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .box{
+      max-width: 300px;
+    }
+  }
+
+
+  .box {
+    margin:1rem;
+    padding: 1rem;
+    background: $bg-color;
+    color: $fg-color;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    h2{
+      font-style: italic;
+      margin: auto;
+      max-width:80%;
+      clear: both;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  .striked{
+    text-decoration: line-through;
+  }
+
+  .promo{
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    width:100%;
+
+  }
+
+  .features{
+    display: flex;
+  }
+
+  ul{
+    color:#333;
+  }
+  
+  .promotions>div{
+    display: flex;
+    background: #fff;
+    align-items: center;
+    font-size: 0.8em;
+    img{margin-right:20px;}
+  }
+
+  .order{
+    background: $fg-color;
+    color: $bg-color;
+    border-radius: 5px;
+    margin:auto;
+    width:80%;
+    border:none;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding:5px 0;
+  }
+  .price{
+    text-decoration: line-through;;
+  }
+  .recuring{
+    background: orange;
+  }
+  .formated{
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  .hm{
+    display: none;
+  }
+}
