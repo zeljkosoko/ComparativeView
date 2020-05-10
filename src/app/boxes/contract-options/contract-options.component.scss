@@ -1,0 +1,23 @@
+@import "../../../variables.scss";
+.box-selector {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  right:10px;
+  top:10px;
+
+  .title {
+    margin-right: 1rem;
+  }
+
+  select.options {
+    appearance: none;
+    background: $bg-color;
+    color: $fg-color;
+    border-radius: 5px;
+    outline: none;
+    border:none;
+    padding:5px;
+  }
+
+}
