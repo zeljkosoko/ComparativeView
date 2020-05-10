@@ -1,5 +1,5 @@
 <div class="box-selector">
-    <select class="options">
+    <select class="options" (change)="getPackages($event)">
         <option *ngFor='let c of contract_length["contract_length_options"]' selected= 'contract_length["preselected_contract_length"]'>{{c}}</option>
     </select>
 </div>
