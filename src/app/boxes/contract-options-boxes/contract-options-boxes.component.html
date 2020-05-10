@@ -35,6 +35,18 @@
                 </ng-container>
             </ul>
         </div>
+        <div *ngFor="let prom of clo.promotions">
+            <div *ngFor="let discount of prom.discount_variations" class="promotions">
+                <div *ngIf="discount === inputCT">
+                    <img src="{{prom.promotion_image}}" width="80px"/>
+                    <div>{{prom.promo_text.slice(3,28)}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <hr>
+        </div>
         <button class="order">Naručite</button>
     </div>
 </div>
