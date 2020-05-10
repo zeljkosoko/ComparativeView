@@ -16,4 +16,11 @@ export class ContractOptionsBoxesComponent implements OnInit {
   ngOnInit() {
   }
 
+  getFirstPart(longname, attrVal): string{
+    return longname.slice(0, longname.indexOf(attrVal));
+  }
+
+  getSecondPart(longname, attrVal):string {
+    return longname.slice(longname.indexOf(attrVal)+attrVal.length);
+  }
 }
