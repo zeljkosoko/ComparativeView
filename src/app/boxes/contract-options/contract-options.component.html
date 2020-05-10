@@ -3,3 +3,10 @@
         <option *ngFor='let c of contract_length["contract_length_options"]' selected= 'contract_length["preselected_contract_length"]'>{{c}}</option>
     </select>
 </div>
+
+<app-contract-options-boxes
+    [inputMB]="mainBox"
+    [inputCLO]="selectedItems"
+    [inputCT]="contractType"
+    [iPromoText]="promoText">
+</app-contract-options-boxes>
