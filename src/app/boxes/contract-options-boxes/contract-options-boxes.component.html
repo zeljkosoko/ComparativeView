@@ -23,6 +23,18 @@
         <div>
             <hr>
         </div>
+        <div class="features">
+            <img src="{{inputMB.assets.net_category}}" width="40px"/>
+            <ul>
+                <ng-container *ngFor="let inc of clo.included">
+                    <li *ngIf="inc.product_category === 'net'">
+                        {{ getFirstPart(inc.long_name,inc.attributes.attribute_value)}}
+                        <strong>{{inc.attributes.attribute_value}}</strong>
+                        {{ getSecondPart(inc.long_name,inc.attributes.attribute_value)}}
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
         <button class="order">Naručite</button>
     </div>
 </div>
