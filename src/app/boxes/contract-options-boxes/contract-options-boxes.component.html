@@ -43,11 +43,21 @@
                 </div>
             </div>
         </div>
-
         <div>
             <hr>
+        </div>
+        <div *ngIf="clo.prices.old_price_recurring[inputCT] && clo.prices.price_recurring[inputCT]">
+            <span class="striked">{{clo.prices.old_price_recurringinputCT}}</span>
+            <span class="price">{{getFormatedPrice(clo.prices.old_price_recurring[inputCT])}}</span>
+            <span class="formated">{{getFormatedPrice(clo.prices.price_recurring[inputCT])}}</span>
+        </div>
+        <p class="hm">{{clo.prices.old_price_promo_text.slice(3,18)}}</p>
+        <div class="formated"
+                *ngIf="!clo.prices.old_price_recurring[inputCT] && clo.prices.price_recurring[inputCT]"
+        >{{getFormatedPrice(clo.prices.price_recurring[inputCT])}}
         </div>
         <button class="order">Naručite</button>
     </div>
 </div>
+
 

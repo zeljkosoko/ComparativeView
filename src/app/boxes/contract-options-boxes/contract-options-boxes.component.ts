@@ -23,4 +23,8 @@ export class ContractOptionsBoxesComponent implements OnInit {
   getSecondPart(longname, attrVal):string {
     return longname.slice(longname.indexOf(attrVal)+attrVal.length);
   }
+
+  getFormatedPrice(price):string{    
+    return Math.floor(parseFloat(price)) + " rsd/mes.";
+  }
 }
